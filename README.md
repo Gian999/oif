@@ -40,6 +40,10 @@ Después de `haz examen.pdf` y `ss2`, si el ejercicio 2 quedó extraño: `repens
 
 Después de `haz examen.pdf`, escribe `anss2` seguido de lo que quieres o falta, por ejemplo `anss2 creo que me pide gráfico` o `anss4 solo pedía la parábola y el error`. La IA vuelve a analizar el ejercicio 2 con tu nota y escribe los comandos de una vez (es `repensar 2` + `ss2` en un solo paso; también `anss 2 ...`, hasta `anss12`). Si el ejercicio no cambia no lo ejecuta. `ss2 creo que me pide gráfico` hace lo mismo; `ss 2 e` / `ss 2 o` siguen forzando solo Excel / con Octave. Si tu nota lleva paréntesis o comillas, escríbela como texto: `anss2("me pide (b) gráfico")`.
 
+## Archivos de la carpeta actual: sin escribir la extensión
+
+`haz 3` busca `3.png`, `ej3.png`, `eje3.png`, `ejercicio3.png` (también `.jpg`, `.jpeg`, `.webp`, `.gif`, `.pdf`) y `haz examen` busca `examen.png`, `examen.jpg` o `examen.pdf`, sin importar mayúsculas, siempre en la carpeta donde estás parado en Octave. Con `octavei` pasa igual si pones una arroba: `octavei("resuelve @3")`, `octavei("mira @ej4 y dime el error")`, `octavei("usa @datos")` (imagen primero, luego PDF y al final `.xlsx` como libro) y `octavei("@examen")` equivale a `haz examen`. Si no encuentra el archivo te lo dice sin llamar a la IA; con la extensión (`@3.png`) sigue funcionando igual.
+
 ## Historial de comandos limpio
 
 Los comandos del paquete (`haz`, `ss2`, `anss2`, `octavei`, `exportar`, `repensar`, `h`, `oifs`) **no se guardan** en el historial (flecha arriba, panel Command History, archivo de historial): solo quedan las líneas de código que el programa teclea. Eso también evita que una clave escrita como `oifs("sk-ant-...")` se quede guardada. Para limpiar lo que ya estaba guardado de antes: `oifs limpiar`. Octave no trae "borrar una línea" del historial (solo `history -c`, que lo borra todo); el paquete lo hace vaciando el historial y volviendo a cargar las demás líneas.
