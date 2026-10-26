@@ -48,9 +48,9 @@ Después de `haz examen.pdf`, escribe `anss2` seguido de lo que quieres o falta,
 
 Los comandos del paquete (`haz`, `ss2`, `anss2`, `octavei`, `exportar`, `repensar`, `h`, `oifs`) **no se guardan** en el historial (flecha arriba, panel Command History, archivo de historial): solo quedan las líneas de código que el programa teclea. Eso también evita que una clave escrita como `oifs("sk-ant-...")` se quede guardada. Para limpiar lo que ya estaba guardado de antes: `oifs limpiar`. Octave no trae "borrar una línea" del historial (solo `history -c`, que lo borra todo); el paquete lo hace vaciando el historial y volviendo a cargar las demás líneas.
 
-## Excel y LibreOffice
+## Excel
 
-Cada ejercicio se guarda como `.xlsx` (principal: abre igual en Excel y en LibreOffice) y, si LibreOffice está instalado, también como `.ods` en la misma carpeta. Para no generar el `.ods`: `setenv("OCT_IA_ODS","0")`.
+Cada ejercicio se guarda solo como `.xlsx` para Excel de Windows (también abre en LibreOffice). Si algún día quieres además el `.ods`: `setenv("OCT_IA_ODS","1")`.
 
 ## El código de Octave sale de los mismos datos que el Excel
 
